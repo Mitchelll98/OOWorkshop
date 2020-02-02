@@ -29,7 +29,22 @@ namespace COMP3304Session1
 
         private void ExitNote_Click(object sender, EventArgs e)
         {
+            // Disposes of Current Note
             this.Dispose();
+        }
+
+        private void ActionNote_Click(object sender, EventArgs e)
+        {
+            // Collaspe Note
+
+
+            this.Size = new Size(this.Size.Width, 150);
+
+
+            // Enlarge Note
+
+            this.Size = new Size(this.Size.Width, 300);
+
         }
     }
 }

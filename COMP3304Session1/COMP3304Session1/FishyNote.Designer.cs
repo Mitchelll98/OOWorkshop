@@ -50,10 +50,11 @@
             this.ActionNote.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ActionNote.Location = new System.Drawing.Point(12, 12);
             this.ActionNote.Name = "ActionNote";
-            this.ActionNote.Size = new System.Drawing.Size(198, 63);
+            this.ActionNote.Size = new System.Drawing.Size(269, 63);
             this.ActionNote.TabIndex = 1;
-            this.ActionNote.Text = "Collaspe / Open";
+            this.ActionNote.Text = "Collaspe / Enlarge";
             this.ActionNote.UseVisualStyleBackColor = false;
+            this.ActionNote.Click += new System.EventHandler(this.ActionNote_Click);
             // 
             // ExitNote
             // 
