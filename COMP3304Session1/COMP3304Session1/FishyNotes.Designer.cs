@@ -39,7 +39,7 @@
             this.AddNote.TabIndex = 0;
             this.AddNote.Text = "More Fish!";
             this.AddNote.UseVisualStyleBackColor = true;
-            this.AddNote.Click += new System.EventHandler(this.button1_Click);
+            this.AddNote.Click += new System.EventHandler(this.AddNote_Click);
             // 
             // FishyNotes
             // 
@@ -49,6 +49,7 @@
             this.Controls.Add(this.AddNote);
             this.Name = "FishyNotes";
             this.Text = "FishyNotes";
+            this.Load += new System.EventHandler(this.FishyNotes_Load);
             this.ResumeLayout(false);
 
         }

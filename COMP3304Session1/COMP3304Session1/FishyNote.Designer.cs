@@ -29,16 +29,42 @@
         private void InitializeComponent()
         {
             this.textNote = new System.Windows.Forms.TextBox();
+            this.ActionNote = new System.Windows.Forms.Button();
+            this.ExitNote = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textNote
             // 
-            this.textNote.Location = new System.Drawing.Point(50, 50);
+            this.textNote.AcceptsReturn = true;
+            this.textNote.Location = new System.Drawing.Point(12, 81);
+            this.textNote.Multiline = true;
             this.textNote.Name = "textNote";
-            this.textNote.Size = new System.Drawing.Size(286, 31);
+            this.textNote.Size = new System.Drawing.Size(377, 357);
             this.textNote.TabIndex = 0;
             this.textNote.Text = "Enter your note text here...";
+            this.textNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textNote.TextChanged += new System.EventHandler(this.textNote_TextChanged);
+            // 
+            // ActionNote
+            // 
+            this.ActionNote.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.ActionNote.Location = new System.Drawing.Point(12, 12);
+            this.ActionNote.Name = "ActionNote";
+            this.ActionNote.Size = new System.Drawing.Size(198, 63);
+            this.ActionNote.TabIndex = 1;
+            this.ActionNote.Text = "Collaspe / Open";
+            this.ActionNote.UseVisualStyleBackColor = false;
+            // 
+            // ExitNote
+            // 
+            this.ExitNote.BackColor = System.Drawing.Color.Red;
+            this.ExitNote.Location = new System.Drawing.Point(321, 13);
+            this.ExitNote.Name = "ExitNote";
+            this.ExitNote.Size = new System.Drawing.Size(67, 62);
+            this.ExitNote.TabIndex = 2;
+            this.ExitNote.Text = "X";
+            this.ExitNote.UseVisualStyleBackColor = false;
+            this.ExitNote.Click += new System.EventHandler(this.ExitNote_Click);
             // 
             // FishyNote
             // 
@@ -49,11 +75,14 @@
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(401, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.ExitNote);
+            this.Controls.Add(this.ActionNote);
             this.Controls.Add(this.textNote);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FishyNote";
             this.Text = "FishyNote";
+            this.Load += new System.EventHandler(this.FishyNote_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -62,5 +91,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textNote;
+        private System.Windows.Forms.Button ActionNote;
+        private System.Windows.Forms.Button ExitNote;
     }
 }

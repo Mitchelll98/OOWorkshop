@@ -21,5 +21,15 @@ namespace COMP3304Session1
         {
 
         }
+
+        private void FishyNote_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitNote_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
