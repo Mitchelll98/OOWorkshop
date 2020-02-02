@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.textNote = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // textNote
+            // 
+            this.textNote.Location = new System.Drawing.Point(50, 50);
+            this.textNote.Name = "textNote";
+            this.textNote.Size = new System.Drawing.Size(286, 31);
+            this.textNote.TabIndex = 0;
+            this.textNote.Text = "Enter your note text here...";
+            this.textNote.TextChanged += new System.EventHandler(this.textNote_TextChanged);
             // 
             // FishyNote
             // 
@@ -39,14 +49,18 @@
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(401, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.textNote);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FishyNote";
             this.Text = "FishyNote";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textNote;
     }
 }

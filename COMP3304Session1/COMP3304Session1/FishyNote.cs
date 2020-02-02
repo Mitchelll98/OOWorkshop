@@ -16,5 +16,10 @@ namespace COMP3304Session1
         {
             InitializeComponent();
         }
+
+        private void textNote_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
