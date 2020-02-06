@@ -12,6 +12,11 @@ namespace COMP3304Session1
 {
     public partial class FishyNote : Form
     {
+        // Variables
+
+        bool _isCollasped = false;
+
+
         public FishyNote()
         {
             InitializeComponent();
@@ -35,15 +40,24 @@ namespace COMP3304Session1
 
         private void ActionNote_Click(object sender, EventArgs e)
         {
-            // Collaspe Note
+
+            if (!_isCollasped)
+            {
+                // Collaspe Note
+                this.Size = new Size(this.Size.Width, 90);
+                textNote.Visible = false;
+                _isCollasped = true;
+            }
+            else
+            {
+                // Enlarge Note
+                this.Size = new Size(this.Size.Width, 280);
+                textNote.Visible = true;
+                _isCollasped = false;
+            }
 
 
-            this.Size = new Size(this.Size.Width, 150);
-
-
-            // Enlarge Note
-
-            this.Size = new Size(this.Size.Width, 300);
+            
 
         }
     }
