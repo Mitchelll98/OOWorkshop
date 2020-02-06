@@ -39,10 +39,12 @@
             this.textNote.Location = new System.Drawing.Point(12, 81);
             this.textNote.Multiline = true;
             this.textNote.Name = "textNote";
+            this.textNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textNote.Size = new System.Drawing.Size(377, 357);
             this.textNote.TabIndex = 0;
             this.textNote.Text = "Enter your note text here...";
             this.textNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNote.Click += new System.EventHandler(this.textNote_Click);
             this.textNote.TextChanged += new System.EventHandler(this.textNote_TextChanged);
             // 
             // ActionNote

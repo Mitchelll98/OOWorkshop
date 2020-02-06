@@ -16,16 +16,15 @@ namespace COMP3304Session1
 
         bool _isCollasped = false;
 
+        List<string> _userNotes = new List<string>();
+        string _textNote = "";
+
 
         public FishyNote()
         {
             InitializeComponent();
         }
 
-        private void textNote_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void FishyNote_Load(object sender, EventArgs e)
         {
@@ -54,11 +53,33 @@ namespace COMP3304Session1
                 this.Size = new Size(this.Size.Width, 280);
                 textNote.Visible = true;
                 _isCollasped = false;
+
+
+                
+
+                for (int i = 0; i < _userNotes.Count; i++)
+                {
+
+                    textNote.Text += Environment.NewLine + "-------------------" + Environment.NewLine + _userNotes[i];
+                }
             }
 
 
             
 
+        }
+
+        private void textNote_Click(object sender, EventArgs e)
+        {
+            _userNotes.Add(_textNote);
+
+            textNote.Text = "";
+            
+        }
+
+        private void textNote_TextChanged(object sender, EventArgs e)
+        {
+            _textNote = textNote.Text;
         }
     }
 }
