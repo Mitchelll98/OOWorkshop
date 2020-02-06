@@ -85,7 +85,6 @@
             this.MinimizeBox = false;
             this.Name = "FishyNote";
             this.Text = "FishyNote";
-            this.Load += new System.EventHandler(this.FishyNote_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

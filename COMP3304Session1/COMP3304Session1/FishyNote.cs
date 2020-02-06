@@ -13,23 +13,37 @@ namespace COMP3304Session1
     public partial class FishyNote : Form
     {
         // Variables
+        private int _idNumber;
+
+        //
+        //NoteData _noteData;
+
 
         bool _isCollasped = false;
 
-        List<string> _userNotes = new List<string>();
+        private List<string> _userNotes = new List<string>();
         string _textNote = "";
 
 
-        public FishyNote()
+        // Constructor
+        public FishyNote(int id)
         {
+            this.NoteID = id;
             InitializeComponent();
         }
 
-
-        private void FishyNote_Load(object sender, EventArgs e)
+        public int NoteID   // Note ID property
         {
-
+            get { return _idNumber; }   // get method
+            set { _idNumber = value; }  // set method
         }
+
+        public List<string> NoteData   // Note Data property
+        {
+            get { return _userNotes; }   // get method
+            set { _userNotes = value; }  // set method
+        }
+
 
         private void ExitNote_Click(object sender, EventArgs e)
         {
@@ -56,12 +70,7 @@ namespace COMP3304Session1
 
 
                 
-
-                for (int i = 0; i < _userNotes.Count; i++)
-                {
-
-                    textNote.Text += Environment.NewLine + "-------------------" + Environment.NewLine + _userNotes[i];
-                }
+                
             }
 
 
